@@ -88,7 +88,7 @@ body {
 
   li.nameplate {
     font-size: 50px;
-    color: white;
+    color: #3498db;
   }
   
 
@@ -100,7 +100,7 @@ body {
   
 
   a.contact:hover {
-    color: blue;
+    color: #3498db;
   }
   
 
