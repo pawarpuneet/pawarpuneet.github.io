@@ -95,19 +95,16 @@ body {
   a.contact:link {
     font-size: 18px;
     text-decoration: none;
-    color: #ffa81c;
+    color: #3498db;
   }
-  
 
+  a.contact:visited {
+    color: #3498db;
+  } 
+  
   a.contact:hover {
     color: blue;
   }
-  
-
-  a.contact:visited {
-    color: #ffa81c;
-  }
-  
 
   a.hex-link {
     line-height: 90px;

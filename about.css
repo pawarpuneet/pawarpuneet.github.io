@@ -322,26 +322,23 @@ body {
 
   li.nameplate {
     font-size: 40px;
-    color: white;
+    color: #3498db;
   }
   
 
   a.contact:link {
     font-size: 18px;
     text-decoration: none;
-    color: #ffa81c;
-  }
-  
-
-  a.contact:hover {
-    color: blue;
+    color: #3498db;
   }
   
 
   a.contact:visited {
-    color: #ffa81c;
+    color: #3498db;
   }
-  
+  a.contact:hover {
+    color: blue;
+  }
 
   blockquote {
     font-style: italic;
