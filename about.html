@@ -3,67 +3,74 @@
 
 <head>
   <title>Puneet P. - About</title>
-  <link rel="stylesheet" href="about.css">
-  <link rel="icon" href="faviconP.ico" type="image/x-icon"/>
+
+  <link rel=stylesheet type=text/css href=test.css>
+  <link rel="stylesheet" type=text/css href="about.css">
+  <link rel=icon href="images/logo.png" type=image/x-icon>
 </head>
 
 <body>
     <a name="top"></a>
-    
     <header>
-        <nav class="hex-row">
+        <nav aria-label=Primary class="hex-row">
             <div class="hex">
                 <div class="hex-top"></div>
                 <div class="hex-mid">
-                    <a class="hex-link"; href="index.html">home</a> 
+                    <a class="hex-link"; href="index.html">Home</a> 
                 </div>
                 <div class="hex-bottom"></div>
             </div>
             <div class="hex">
                 <div class="hex-top"></div>
                 <div class="hex-mid">
-                    <a class="hex-link"; href="blog/index.html">posts</a> 
+                    <a class="hex-link"; href="blog/index.html">Posts</a> 
                 </div>
                 <div class="hex-bottom"></div>
             </div>
             <div class="hex">
                 <div class="hex-top"></div>
                 <div class="hex-mid">
-                    <a class="hex-link"; href="projects.html">projects</a> 
+                    <a class="hex-link"; href="portfolio.html">Portfolio</a> 
                 </div>
                 <div class="hex-bottom"></div>
             </div>
             <div class="hex">
                 <div class="hex-top-cur"></div>
                 <div class="hex-mid-cur">
-                    <a class="hex-link-cur"; href="about.html">about</a> 
+                    <a class="hex-link-cur"; href="about.html">About</a> 
                 </div>
                 <div class="hex-bottom-cur"></div>
             </div>            
         </nav>	
-        <p class="contact">
-            <ul class="contact">
-                <li class="nameplate"><b>Puneet</b></li>
-                <li><a href="mailto:pawar.puneet@gmail.com" class="contact">email.</a></li>
-                <li><a href="https://github.com/pawarpuneet" class="contact">github.</a></li>
-                <li><a href="https://www.linkedin.com/in/puneet-pawar-data-scientist/" class="contact">linkedin.</a></li>
-                <li><a href="resume.html" class="contact">resume.</a></li>
-            </ul>
-        </p>
-        <div style="clear: both;"></div>
-    </header>
-    <section class="main">
-        <section class = "subsection">
-            <h1 class="heading">Brief introduction</h1>
-            <h1 class="borderaccent"></h1>
-            <p>Quantitative problem solver.</p>
-            <p><mark class="highlight">quality 1</mark> (some description)</p>
-            <p><mark class="highlight">quality 2</mark> (some description)</p>
-            <p><mark class="highlight">quality 3</mark> (some description)</p>
-            <p><mark class="highlight">quality 4</mark> (some description)</p>
-            <p>One liner about me</p>
-        </section>	
-    
+        <div id=header-inner>
+            <div id=site-branding>
+                <a  title="About · Puneet Pawar"></a>  
+                <div id=site-name>
+                <a title="About · Puneet Pawar">Puneet Pawar</a>
+                </div>
+            </div>
+            <nav aria-label=Primary>
+                <ul itemscope itemtype=http://schema.org/SiteNavigationElement>
+                    <li><a href="mailto:pawar.puneet@gmail.com" itemprop=url>Email</a></li>
+                    <li><a href="https://github.com/pawarpuneet" itemprop=url>Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/puneet-pawar-data-scientist/" itemprop=url>Linkedin</a></li>
+                    <li><a href="resume.html" itemprop=url>Resume</a></li>
+                </ul>
+            </nav>
+            <button id=toggle-site-theme aria-label="Toggle between the light and dark themes of this site" title="Toggle between the light and dark themes of this site" role=switch class=hidden aria-hidden=true>🌞</button>
+        </div>
+    </header>   
+        <section class="main">
+            <section class = "subsection">
+                <h1 class="heading">Brief introduction</h1>
+                <h1 class="borderaccent"></h1>
+                <p>Quantitative problem solver.</p>
+                <p><mark class="highlight">quality 1</mark> some description .............fdfdfsfdsfsdfsdfsdfsdfsdfdsfd sfsdfsdfsdfsdfdf.... ....... ......fdfdfd fsdfdsfdf fsfsdfdsfds fdsfsdfsd fsfsdfsf.......... ............ ..... ........... .......)</p>
+                <p><mark class="highlight">quality 2</mark> (some description)</p>
+                <p><mark class="highlight">quality 3</mark> (some description)</p>
+                <p><mark class="highlight">quality 4</mark> (some description)</p>
+                <p>One liner about me</p>
+            </section>	    
 
         
         <hr class="footer-divider"></hr>
@@ -73,8 +80,8 @@
                 <li>
                     <ul class="nav-panel">
                         <li><a href="index.html">Home</a>.</li>
-                        <li><a href="about.html">About</a>.</li>
-                        <li><a href="projects.html">Projects</a>.</li>
+                        <li><a href="blog/index.html">Posts</a>.</li>
+                        <li><a href="portfolio.html">Portfolio</a>.</li>
                     </ul>
                 </li>
             <ul>

@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("images/background.png");
+    background-image: url("");
     background-attachment: fixed;
     background-size: cover;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -13,16 +13,20 @@ body {
   section.main {
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: oklch(98.51% 0 0);
   }
   
 
   section.subsection {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-inline:auto;
+    
     padding-top: 2em;
+    max-width: 110ch;
   }
   
+  p.small{
+    font-size: 16px;
+  }
 
   section.overview {
     margin-left: 20%;
@@ -52,6 +56,14 @@ body {
     margin-top: 0px;
   }
   
+  h2.heading {
+    border-top: 0px;
+    border-left: 0px;
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: 2.5em;
+    margin-bottom: 0px;
+  }
 
   ul.languages {
     list-style-type: none;
@@ -76,7 +88,7 @@ body {
   
 
   mark.highlight {
-    background-color: #222;
+    background-color: #3498db;
     border-radius: 3px;
     color: white;
     font-size: 0.875rem;
@@ -85,7 +97,7 @@ body {
   }
   
   mark.matlab, .python, .cpp, .r, .git, .web {
-    background-color: #222;
+    background-color: #3498db;
     border-radius: 3px;
     font-size: 0.875rem;
     padding: 3px 5px 3px 7px;
@@ -175,7 +187,7 @@ body {
 
   th.skills {
     font-size: 1.4em;
-    color: #2963CF;
+    color: #3498db;
     text-align: center;
   }
   
@@ -346,10 +358,11 @@ body {
     padding-left: 3em;
     border-left: 8px solid #2963CF;
   }
-  
+
  
   blockquote.code {
     font-style: normal;
+    font-size: 16px;
     margin: 0em;
     margin-top: 4em;
     padding-left: 3em;
@@ -428,7 +441,7 @@ body {
 
   div.hex-top-cur {
     width: 0;
-    border-bottom: 20px solid #FFFFFF;
+    border-bottom: 20px solid oklch(98.51% 0 0);
     border-left: 34.66667px solid transparent;
     border-right: 34.66667px solid transparent;
   }
@@ -436,7 +449,7 @@ body {
 
   div.hex-bottom-cur {
     width: 0;
-    border-top: 20px solid #FFFFFF;
+    border-top: 20px solid oklch(98.51% 0 0);
     border-left: 34.66667px solid transparent;
     border-right: 34.66667px solid transparent;
   }
@@ -445,9 +458,9 @@ body {
   div.hex-mid-cur {
     width: 69.33333px;
     height: 40px;
-    background-color: #FFFFFF;
+    background-color: oklch(98.51% 0 0);
     text-align: center;
-    box-shadow: 0px 0px 6px #FFFFFF;
+    box-shadow: 0px 0px 6px oklch(98.51% 0 0);
   }
   
 
@@ -455,7 +468,7 @@ body {
     line-height: 40px;
     text-decoration: none;
     font-size: 17px;
-    color: white;
+    color: oklch(98.51% 0 0);
   }
   
 

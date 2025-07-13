@@ -1,42 +1,51 @@
-<!DOCTYPE html>
 
-<html>
-
-<head>
-  <title>Puneet Pawar</title>
-  <meta name="description" content="Homepage for Puneet Pawar, data scientist.">
-	<link rel="icon" href="faviconP.ico" type="image/x-icon"/>
-
-  <link rel="stylesheet" href="home.css">
+<!doctype html>
+<html lang=en dir=ltr data-theme=light>
+    <head>
+        <meta charset=utf-8>
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>Puneet P. - Data Scientist</title>
+        <link rel=stylesheet type=text/css href=test.css>
+        <link rel=stylesheet type=text/css href=home.css>
+        <meta name=description itemprop=description content="A data scientist with a passion for quantitative problem solving and yoga.">
+        <meta name=author content="Puneet Pawar">
+        <link rel=icon href="images/logo.png" type=image/x-icon>
+        
 </head>
-
-<body>
-
+<body itemscope itemtype=http://schema.org/WebPage>
     <header>
-        <p class="contact">
-            <ul class="contact">
-                <li class="nameplate"><b>Puneet</b></li>
-                <li><a href="mailto:pawar.puneet@gmail.com" class="contact">email.</a></li>
-                <li><a href="https://github.com/pawarpuneet" class="contact">github.</a></li>
-                <li><a href="https://www.linkedin.com/in/puneet-pawar-data-scientist/" class="contact">linkedin.</a></li>
-                <li><a href="resume.html" class="contact">resume.</a></li>
+        <div id=header-inner>
+            <div id=site-branding>
+                <a  title="Home · Puneet Pawar"></a>  
+            <div id=site-name>
+                <a title="Home · Puneet Pawar">Puneet Pawar</a>
+            </div>
+        </div>
+        <nav aria-label=Primary>
+            <ul itemscope itemtype=http://schema.org/SiteNavigationElement>
+                <li><a href="mailto:pawar.puneet@gmail.com" itemprop=url>Email</a></li>
+                <li><a href="https://github.com/pawarpuneet" itemprop=url>Github</a></li>
+                <li><a href="https://www.linkedin.com/in/puneet-pawar-data-scientist/" itemprop=url>Linkedin</a></li>
+                <li><a href="resume.html" itemprop=url>Resume</a></li>
             </ul>
-        </p>
-        <div style="clear: both;"></div>
+        </nav>
+        <button id=toggle-site-theme aria-label="Toggle between the light and dark themes of this site" title="Toggle between the light and dark themes of this site" role=switch class=hidden aria-hidden=true>🌞</button>
+    </div>
     </header>
+    <section class="main">
     <div class="contain">
         <div class="hex-row">
             <div class="hex">
                 <div class="hex-top"></div>
                 <div class="hex-mid">
-                    <a class="hex-link"; href="blog/index.html">posts</a> 
+                    <a class="hex-link"; href="blog/index.html">Posts</a> 
                 </div>
                 <div class="hex-bottom"></div>
             </div>
             <div class="hex">
                 <div class="hex-top"></div>
                 <div class="hex-mid">
-                    <a class="hex-link"; href="projects.html">projects</a> 
+                    <a class="hex-link"; href="portfolio.html">Portfolio</a> 
                 </div>
                 <div class="hex-bottom"></div>
             </div>
@@ -44,11 +53,20 @@
         <div class="hex-below">
             <div class="hex-top"></div>
             <div class="hex-mid">
-                <a class="hex-link"; href="about.html">about</a>
+                <a class="hex-link"; href="about.html">About</a>
             </div>
             <div class="hex-bottom"></div>
         </div>
     </div>
-</body>   
+    </section>
+    <section>
+    <hr class="footer-divider"></hr> 
+    <footer>
+        <ul class="foot-nav">
+            <li class="to-the-top">A data scientist with a passion for quantitative problem solving and yoga.</li>
 
+        <ul>
+    </footer>
+</section>
+</body>
 </html>
