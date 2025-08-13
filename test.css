@@ -13,7 +13,7 @@
     "DejaVu Sans Mono", monospace;
     --max-characters-per-line:70ch;
     --light-background-colour:oklch(39.61% 0.024 334.08);
-    --dark-background-colour:oklch(26.32% 0.038 328.6);
+    --dark-background-colour:oklch(98.51% 0 0); /*oklch(26.32% 0.038 328.6); */
     --highlight1-colour:#06b6ef;
     --highlight2-colour:#815ba4;
     --highlight3-colour:oklch(92.87% 0.019 113.36);
