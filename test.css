@@ -23,7 +23,7 @@
     --highlight7-colour:#ef6155;
     --highlight8-colour:#5bc4bf;
     --highlight9-colour:#fec418;
-    --base-text-colour:oklch(98.51% 0 0);/*oklch(23.03% 0.012 264.29);*/
+    --base-text-colour:oklch(23.03% 0.012 264.29);
     --base-background-colour:oklch(98.51% 0 0);
     --primary-colour:var(--highlight1-colour);
     --secondary-colour:var(--highlight2-colour);
