@@ -271,7 +271,13 @@ body {
     margin-right: 0px;
     margin-top: 0px;
   }
-  
+  img.about {
+    max-width: 30%;
+    float: left;
+    margin: 1rem;
+    margin-right: 0px;
+    margin-top: 0px;
+  }  
 
   a {
     color: black;
