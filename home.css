@@ -146,7 +146,7 @@ body {
 
   div.hex-row {
     clear: left;
-    margin-left: 2em;
+    margin-left: 1em;
     float: left;
   }
   
@@ -190,7 +190,7 @@ body {
   div.hex-below {
     padding-left: 84px;
     padding-top: 145.57398px;
-    margin-left: 2em;
+    margin-left: 1em;
   }
   
 
