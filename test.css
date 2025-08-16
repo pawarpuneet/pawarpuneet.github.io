@@ -67,7 +67,7 @@
     --flow-space:var(--space-s-l)}
     
     @media(prefers-color-scheme:dark)
-    {:root{--base-text-colour:oklch(from var(--highlight3-colour) l c h / 90%);--base-background-colour:var(--base-background-colour);--header-background-colour:var(--light-background-colour);--logo-text-colour:var(--dark-background-colour);--nav-hover-text-colour:var(--dark-background-colour);--code-element-background-colour:var(--highlight6-colour);--code-element-text-colour:var(--highlight9-colour)}@supports(-moz-appearance:none){:root{--base-text-colour:var(--highlight3-colour)}}}
+    {:root{--base-text-colour:oklch(from var(--highlight3-colour) l c h / 90%);--base-background-colour:var(--dark-background-colour);--header-background-colour:var(--light-background-colour);--logo-text-colour:var(--dark-background-colour);--nav-hover-text-colour:var(--dark-background-colour);--code-element-background-colour:var(--highlight6-colour);--code-element-text-colour:var(--highlight9-colour)}@supports(-moz-appearance:none){:root{--base-text-colour:var(--highlight3-colour)}}}
     
     :root.dark-theme{--base-text-colour:oklch(from var(--highlight3-colour) l c h / 90%);--base-background-colour:var(--dark-background-colour);--header-background-colour:var(--light-background-colour);--logo-text-colour:var(--dark-background-colour);--nav-hover-text-colour:var(--dark-background-colour);--code-element-background-colour:var(--highlight6-colour);--code-element-text-colour:var(--highlight9-colour)}
     

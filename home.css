@@ -33,7 +33,7 @@
     height: 100%;
   /*  margin-left: 5%;
     margin-right: 5%; */
-    background-color: oklch(98.51% 0 0);
+  /*  background-color: oklch(98.51% 0 0); */
   }
   section.overview {
     margin-left: 20%;
@@ -126,7 +126,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: black;
+    color: var(--base-text-colour);
     line-height: 1.5;
     margin: 0px 0px;
   }
@@ -237,14 +237,16 @@ body {
 
   a.hex-link {
     line-height: 90px;
-    text-decoration: none;
+    text-decoration: none ;
+  /*  text-shadow: 2px 2px 3px #1a4c6d;*/
     font-size: 38.25px;
     color: #3498db;
+    
   }
   
 
   a.hex-link:hover {
-    color: blue;
+    color: var(--nav-hover-text-colour);
   }
   
   footer {
