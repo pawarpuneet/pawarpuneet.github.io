@@ -272,7 +272,7 @@ body {
     margin-top: 0px;
   }
   img.about {
-    max-width: 30%;
+    max-width: 100%;
     float: left;
     margin: 1rem;
     margin-right: 0px;
