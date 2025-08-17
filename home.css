@@ -168,6 +168,12 @@ body {
     border-bottom: 45px solid #ffa81c;
     border-left: 78px solid transparent;
     border-right: 78px solid transparent;
+
+
+  box-shadow:
+    2em 4em 6em -2em var(--dark-background-colour),
+    1em 2em 3.5em -2.5em var(---dark-background-colour);
+ 
   }
   
 
@@ -176,6 +182,12 @@ body {
     border-top: 45px solid #ffa81c;
     border-left: 78px solid transparent;
     border-right: 78px solid transparent;
+
+  
+  box-shadow:
+    2em 4em 6em -2em var(--dark-background-colour),
+    1em 2em 3.5em -2.5em var(--dark-background-colour);
+
   }
   
 
@@ -184,6 +196,13 @@ body {
     height: 90px;
     background-color: #ffa81c;
     text-align: center;
+
+
+  box-shadow:
+    2em 4em 6em -2em var(--dark-background-colour),
+    1em 2em 3.5em -2.5em var(--dark-background-colour);
+
+ 
   }
   
 
