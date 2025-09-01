@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+
+        <!-- Required metadata tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Default metadata -->
+    <meta name="author" content="Puneet Pawar" />
+    <meta name="description" content="In this project, we are going to contribute to the development of a mobile app by writing a couple of functions that are mostly focused on calculating probabilities. The app is aimed to both prevent and treat lottery addiction by helping people better estimate their chances of winning." />
+    <meta name="keywords" content="pandas">
+<meta property="og:site_name" content="Puneet P. - Posts" />
+<meta property="og:title" content="What are the chances of winning a lottery?" />
+<meta property="og:description" content="In this project, we are going to contribute to the development of a mobile app by writing a couple of functions that are mostly focused on calculating probabilities. The app is aimed to both prevent and treat lottery addiction by helping people better estimate their chances of winning." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://pawarpuneet.github.io/blog/what-are-the-chances-of-winning-a-lottery.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-01 16:35:00-07:00" />
+<meta property="article:modified_time" content="" />
+<meta property="article:author" content="https://pawarpuneet.github.io/blog/author/puneet-pawar.html">
+<meta property="article:section" content="Probability" />
+	<meta property="article:tag" content="pandas" />
+	<meta property="og:image" content="https://pawarpuneet.github.io/blog/">
+
+        <!-- Site Claim -->
+
+
+        <!-- Title -->
+        <title>
+    What are the chances of winning a lottery? &ndash; Puneet P. - Posts
+        </title>
+        
+        <!-- Icon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- Search engine -->
+            <meta name="robots" content="" />
+
+        <!-- Feeds -->
+
+
+
+
+
+
+
+
+        <!-- Styles -->
+        <!--
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css">
+        -->
+        <link rel="stylesheet" href="../../blog/theme/bootstrap/bootstrap.min.css">
+        <!--
+        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css">
+        -->
+        <link rel="stylesheet" href="../../blog/theme/pygment/friendly.min.css">
+        <!--
+        <link rel="stylesheet" href="https://pawarpuneet.github.io/blog/../../blog/theme/extra/admonition.min.css">
+        -->
+        <link rel="stylesheet" href="../../blog/theme/style.css">
+
+        <!-- Google Analytics -->
+
+        <!-- Google Global Site Tag -->
+
+        <!-- Google Tag Manager -->
+
+        <!-- Google Adsense -->
+
+        <!-- Heap Analytic -->
+
+        <!-- Piwik Tracking -->
+
+        <!-- Matomo Tracking -->
+
+</head>
+
+<!-- Body -->
+<body class="d-flex flex-column" data-spy="scroll" data-target="#toc" data-offset="0" style="position: relative;">
+    <!-- Top anchor -->
+    <a href="#" id="backToTop" style="display: none; z-index: 1;" title="Back to top"><span></span></a>
+
+    <!-- Google tag manager -->
+
+    <!-- Navigation -->
+    <nav class="flex-shrink-0 navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark text-light shadow-sm">
+        <!-- Logo -->
+        <a class="navbar-brand" href="https://pawarpuneet.github.io/blog/index.html">All Posts</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon small"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <!-- i18n subsites -->
+
+            <!-- Page links -->
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item ">                           
+                    <a class="nav-link" href="https://pawarpuneet.github.io/blog/index.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z" fill="currentColor"></path>
+                        </svg>
+                        All Posts <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pawarpuneet.github.io/blog/categories.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M16 6h-8v-6h8v6zm-8 12h-8v6h8v-6zm16 0h-8v6h8v-6zm-11-7v-3h-2v3h-8v5h2v-3h14v3h2v-5h-8z" fill="currentColor"></path>
+                        </svg>
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pawarpuneet.github.io/blog/tags.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z" fill="currentColor"></path>
+                        </svg>
+                        Tags
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pawarpuneet.github.io/blog/archives.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M1.8 9l-.8-4h22l-.8 4h-2.029l.39-2h-17.122l.414 2h-2.053zm18.575-6l.604-2h-17.979l.688 2h16.687zm3.625 8l-2 13h-20l-2-13h24zm-8 4c0-.552-.447-1-1-1h-6c-.553 0-1 .448-1 1s.447 1 1 1h6c.553 0 1-.448 1-1z" fill="currentColor"></path>
+                        </svg>
+                        Archives
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pawarpuneet.github.io/index.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z" fill="currentColor"></path>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Search form -->
+            <form class="form-inline text-center" action="search.html">
+                <input class="form-control w-100 bg-dark text-light text-center border-0 p-2" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" placeholder="Type here to search" aria-label="Search">
+            </form>
+
+            <!-- Social links -->
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:pawar.puneet@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Email</title>
+                            <path d="M3.87 4h13.25C18.37 4 19 4.59 19 5.79v8.42c0 1.19-.63 1.79-1.88 1.79H3.87c-1.25 0-1.88-.6-1.88-1.79V5.79c0-1.2.63-1.79 1.88-1.79zm6.62 8.6l6.74-5.53c.24-.2.43-.66.13-1.07-.29-.41-.82-.42-1.17-.17l-5.7 3.86L4.8 5.83c-.35-.25-.88-.24-1.17.17-.3.41-.11.87.13 1.07z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/pawarpuneet">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Github</title>
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/puneet-pawar-data-scientist/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Linkedin</title>
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://pawarpuneet.github.io/resume.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Resume</title>
+                            <path d="M23 11.031c0-0.553-0.448-1-1-1h-3c0 0 0.033-1.204 0.033-2.954 0-1.625-1.346-3.108-3.033-3.108s-2.988 1.411-2.988 3.099c0 1.625-0.012 2.964-0.012 2.964h-3c-0.553 0-1 0.447-1 1 0 0.552 0 1.938 0 1.938h14c0-0.001 0-1.387 0-1.939zM16 8.969c-0.553 0-1-0.448-1-1 0-0.553 0.447-1 1-1 0.552 0 1 0.447 1 1s-0.448 1-1 1zM28 11.031l-4-0.062 0.021 3.104h-16.021v-2.979l-4-0.062c-1.104 0-2 0.896-2 2v14c0 1.104 0.896 2 2 2h24c1.104 0 2-0.896 2-2v-14c0-1.105-0.896-2.001-2-2.001zM10 16.844c1.208 0 2.188 1.287 2.188 2.875s-0.98 2.875-2.188 2.875-2.188-1.287-2.188-2.875 0.98-2.875 2.188-2.875zM5.667 25.979c0 0 0.237-1.902 0.776-2.261s2.090-0.598 2.090-0.598 1.006 1.075 1.434 1.075c0.427 0 1.433-1.075 1.433-1.075s1.552 0.238 2.091 0.598c0.633 0.422 0.791 2.261 0.791 2.261h-8.615zM26 25.031h-9v-1h9v1zM26 23.031h-9v-1h9v1zM26 21.031h-9v-1h9v1zM26 19.031h-9v-1h9v1z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full page -->
+    <div class="flex-shrink-0 flex-grow-1">
+
+        <!-- Header -->
+        <header class="bg-dark text-light shadow-sm pt-3 pb-2">
+	<div class="container">
+		<h3 id="what-are-the-chances-of-winning-a-lottery">What are the chances of winning a lottery?</h3>
+		<p style="font-size:larger;">In this project, we are going to contribute to the development of a mobile app by writing a couple of functions that are mostly focused on calculating probabilities. The app is aimed to both prevent and treat lottery addiction by helping people better estimate their chances of winning.</p>
+        <div class="row mx-auto mt-3">
+            <div class="col-xs-12 col-sm-12 col-md-6 text-left" style="padding: 0">
+                <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" class="card-link">Puneet Pawar</a>
+                <span class="card-link text-success">
+                    <span class="post-date" title="Post date">Mon 01 September 2025</span>
+                    <span class="text-info modified-date" title="Updated date">
+                            Mon 01 September 2025
+                    </span>
+                </span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 text-right" style="padding: 0">
+                <a class="badge badge-success" href="https://pawarpuneet.github.io/blog/category/probability.html">probability</a>
+                    <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/pandas.html">pandas</a>
+            </div>
+        </div>
+	</div>
+        </header>
+
+        <!-- Main -->
+        <main class="py-3">
+                <div class="container">
+                    <!-- Sharing -->
+
+                    <!-- Content -->
+    <!-- 2 columns layout -->
+    <!-- single column layout -->
+        <!-- Sharing -->
+
+        <!-- Share post -->
+
+        <!-- Article -->
+        <div>
+            
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6e418bd4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="What-are-the-chances-of-winning-a-lottery?">What are the chances of winning a lottery?<a class="anchor-link" href="#What-are-the-chances-of-winning-a-lottery?">¶</a></h1><p>A medical institute that aims to prevent and treat gambling addictions wants to build a dedicated mobile app to help lottery addicts better estimate their chances of winning. 
+For the first version of the app, they want us to focus on the 6/49 lottery and build functions that enable users to answer questions like:</p>
+<ul>
+<li>What is the probability of winning the big prize with a single ticket?</li>
+<li>What is the probability of winning the big prize if we play 40 different tickets (or any other number)?</li>
+<li>What is the probability of having at least five (or four, or three, or two) winning numbers on a single ticket?</li>
+</ul>
+<p>Users should also be able to compare their ticket against the historical lottery data and determine whether they would have ever won by now. We have historical data coming from the national 6/49 lottery game in Canada. The data set has data for 3,665 drawings, dating from 1982 to 2018.</p>
+<p><a href="https://en.wikipedia.org/wiki/Lotto_6/49">Lottery info</a><br />
+<a href="https://www.kaggle.com/datascienceai/lottery-dataset">Historical Data</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=576303c2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Core-Functions">Core Functions<a class="anchor-link" href="#Core-Functions">¶</a></h3><p>We'll need to calculate repeatedly probabilities and combinations. so we'll start by writing two functions that we'll use often:</p>
+<ul>
+<li>A function that calculates factorials</li>
+<li>A function that calculates combinations</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=935cc63b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Function to calculate factorial</span>
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">final_product</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">final_product</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">final_product</span>
+
+<span class="c1"># Function to calculate combinations</span>
+<span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=65f7c989">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="One-ticket-probability">One ticket probability<a class="anchor-link" href="#One-ticket-probability">¶</a></h3><p>In the 6/49 lottery, six numbers are drawn from a set of 49 numbers that range from 1 to 49. A player wins the big prize if the six numbers on their tickets match all the six numbers drawn.</p>
+<p>For the first version of the app, we want players to be able to calculate the probability of winning the big prize with the various numbers they play on a single ticket (for each ticket a player chooses six numbers out of 49). So, we'll start by building a function that calculates the probability of winning the big prize for any given ticket.</p>
+<p>We need to be aware of the following details when we write the function:</p>
+<ul>
+<li>Inside the app, the user inputs six different numbers from 1 to 49.</li>
+<li>Under the hood, the six numbers will come as a Python list, which will serve as the single input to our function.</li>
+<li>We want the function to print the probability value in a user friendly way.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2a6e49e2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Function for one ticket probability</span>
+<span class="k">def</span> <span class="nf">one_ticket_probability</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Error: Numbers entered were not 6 unique numbers.'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n_combinations</span> <span class="o">=</span> <span class="n">combinations</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">p_big_prize</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">n_combinations</span>
+        <span class="n">chances</span> <span class="o">=</span> <span class="n">p_big_prize</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''Your chances of winning the big prize with the numbers </span><span class="si">{</span><span class="n">numbers</span><span class="si">}</span><span class="s1"> are </span><span class="si">{</span><span class="n">chances</span><span class="si">:</span><span class="s1">.7f</span><span class="si">}</span><span class="s1">%.</span>
+<span class="s1">In other words, you have 1 in </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">n_combinations</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> chances to win.'''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b34cc202">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ticket1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">one_ticket_probability</span><span class="p">(</span><span class="n">ticket1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Your chances of winning the big prize with the numbers [1, 2, 3, 4, 5, 6] are 0.0000072%.
+In other words, you have 1 in 13,983,816 chances to win.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e6c2cbc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Historical-Data-Check-for-Canada-Lottery">Historical Data Check for Canada Lottery<a class="anchor-link" href="#Historical-Data-Check-for-Canada-Lottery">¶</a></h3><p>We wrote a function that can tell users what is the probability of winning the big prize with a single ticket. Now let's create a way for users should to be able to compare their ticket against the historical lottery data in Canada and determine whether they would have ever won by now.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6412b3cf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=65563180">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'649.csv'</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>PRODUCT</th>
+<th>DRAW NUMBER</th>
+<th>SEQUENCE NUMBER</th>
+<th>DRAW DATE</th>
+<th>NUMBER DRAWN 1</th>
+<th>NUMBER DRAWN 2</th>
+<th>NUMBER DRAWN 3</th>
+<th>NUMBER DRAWN 4</th>
+<th>NUMBER DRAWN 5</th>
+<th>NUMBER DRAWN 6</th>
+<th>BONUS NUMBER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>649</td>
+<td>1</td>
+<td>0</td>
+<td>6/12/1982</td>
+<td>3</td>
+<td>11</td>
+<td>12</td>
+<td>14</td>
+<td>41</td>
+<td>43</td>
+<td>13</td>
+</tr>
+<tr>
+<th>1</th>
+<td>649</td>
+<td>2</td>
+<td>0</td>
+<td>6/19/1982</td>
+<td>8</td>
+<td>33</td>
+<td>36</td>
+<td>37</td>
+<td>39</td>
+<td>41</td>
+<td>9</td>
+</tr>
+<tr>
+<th>2</th>
+<td>649</td>
+<td>3</td>
+<td>0</td>
+<td>6/26/1982</td>
+<td>1</td>
+<td>6</td>
+<td>23</td>
+<td>24</td>
+<td>27</td>
+<td>39</td>
+<td>34</td>
+</tr>
+<tr>
+<th>3</th>
+<td>649</td>
+<td>4</td>
+<td>0</td>
+<td>7/3/1982</td>
+<td>3</td>
+<td>9</td>
+<td>10</td>
+<td>13</td>
+<td>20</td>
+<td>43</td>
+<td>34</td>
+</tr>
+<tr>
+<th>4</th>
+<td>649</td>
+<td>5</td>
+<td>0</td>
+<td>7/10/1982</td>
+<td>5</td>
+<td>14</td>
+<td>21</td>
+<td>31</td>
+<td>34</td>
+<td>47</td>
+<td>45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=452fdf1c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(3665, 11)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fe9405c8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>PRODUCT</th>
+<th>DRAW NUMBER</th>
+<th>SEQUENCE NUMBER</th>
+<th>DRAW DATE</th>
+<th>NUMBER DRAWN 1</th>
+<th>NUMBER DRAWN 2</th>
+<th>NUMBER DRAWN 3</th>
+<th>NUMBER DRAWN 4</th>
+<th>NUMBER DRAWN 5</th>
+<th>NUMBER DRAWN 6</th>
+<th>BONUS NUMBER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3660</th>
+<td>649</td>
+<td>3587</td>
+<td>0</td>
+<td>6/6/2018</td>
+<td>10</td>
+<td>15</td>
+<td>23</td>
+<td>38</td>
+<td>40</td>
+<td>41</td>
+<td>35</td>
+</tr>
+<tr>
+<th>3661</th>
+<td>649</td>
+<td>3588</td>
+<td>0</td>
+<td>6/9/2018</td>
+<td>19</td>
+<td>25</td>
+<td>31</td>
+<td>36</td>
+<td>46</td>
+<td>47</td>
+<td>26</td>
+</tr>
+<tr>
+<th>3662</th>
+<td>649</td>
+<td>3589</td>
+<td>0</td>
+<td>6/13/2018</td>
+<td>6</td>
+<td>22</td>
+<td>24</td>
+<td>31</td>
+<td>32</td>
+<td>34</td>
+<td>16</td>
+</tr>
+<tr>
+<th>3663</th>
+<td>649</td>
+<td>3590</td>
+<td>0</td>
+<td>6/16/2018</td>
+<td>2</td>
+<td>15</td>
+<td>21</td>
+<td>31</td>
+<td>38</td>
+<td>49</td>
+<td>8</td>
+</tr>
+<tr>
+<th>3664</th>
+<td>649</td>
+<td>3591</td>
+<td>0</td>
+<td>6/20/2018</td>
+<td>14</td>
+<td>24</td>
+<td>31</td>
+<td>35</td>
+<td>37</td>
+<td>48</td>
+<td>17</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=99881502">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Historical-Data-Check">Historical Data Check<a class="anchor-link" href="#Historical-Data-Check">¶</a></h3><p>We will write a function that prints:</p>
+<ul>
+<li>the number of times the combination of the given ticket occurred in the Canada data set; and</li>
+<li>the probability of winning the big prize in the next drawing with that combination.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b16a9a88">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">extract_numbers</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">number_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">'number drawn'</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">number_cols</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="nb">set</span><span class="p">(</span><span class="n">row</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
+<span class="k">def</span> <span class="nf">check_historical_occurence</span><span class="p">(</span><span class="n">ticket</span><span class="p">,</span><span class="n">winners</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">winners</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="nb">set</span><span class="p">(</span><span class="n">ticket</span><span class="p">)])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''You ticket has won </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1"> times in the past.</span>
+<span class="s1">Your chances of winning the big prize in the next drawing with the numbers </span><span class="si">{</span><span class="n">ticket</span><span class="si">}</span><span class="s1"> are 0.0000072%.</span>
+<span class="s1">In other words, you have 1 in 13,983,816 chances to win.'''</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c71948d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ticket</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">46</span><span class="p">]</span>
+<span class="n">past_numbers</span> <span class="o">=</span> <span class="n">extract_numbers</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">check_historical_occurence</span><span class="p">(</span><span class="n">ticket</span><span class="p">,</span> <span class="n">past_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>You ticket has won 1 times in the past.
+Your chances of winning the big prize in the next drawing with the numbers [4, 37, 30, 15, 48, 46] are 0.0000072%.
+In other words, you have 1 in 13,983,816 chances to win.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c4cc95bb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ticket2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">44</span><span class="p">]</span>
+<span class="n">check_historical_occurence</span><span class="p">(</span><span class="n">ticket2</span><span class="p">,</span> <span class="n">past_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>You ticket has won 0 times in the past.
+Your chances of winning the big prize in the next drawing with the numbers [3, 2, 44, 22, 1, 44] are 0.0000072%.
+In other words, you have 1 in 13,983,816 chances to win.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=901db659">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Multi-ticket-Probability">Multi-ticket Probability<a class="anchor-link" href="#Multi-ticket-Probability">¶</a></h3><p>Write a function that will allow the users to calculate the chances of winning for any number of different tickets.</p>
+<ul>
+<li>The user will input the number of different tickets they want to play (without inputting the specific combinations they intend to play).</li>
+<li>Our function will see an integer between 1 and 13,983,816 (the maximum number of different tickets).</li>
+<li>The function should print information about the probability of winning the big prize depending on the number of different tickets played.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2b5c01b4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multi_ticket_probability</span><span class="p">(</span><span class="n">n_tickets</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">n_tickets</span> <span class="o">&lt;=</span> <span class="mi">13983816</span><span class="p">:</span>
+        <span class="n">n_combinations</span> <span class="o">=</span> <span class="n">combinations</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+        <span class="n">p_big_prize</span> <span class="o">=</span> <span class="n">n_tickets</span><span class="o">/</span><span class="n">n_combinations</span>
+        <span class="n">chances</span> <span class="o">=</span> <span class="n">p_big_prize</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''Your chances of winning the big prize with </span><span class="si">{</span><span class="n">n_tickets</span><span class="si">}</span><span class="s1"> tickets are </span><span class="si">{</span><span class="n">chances</span><span class="si">:</span><span class="s1">.7f</span><span class="si">}</span><span class="s1">%.</span>
+<span class="s1">In other words, you have 1 in </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">n_combinations</span><span class="o">/</span><span class="n">n_tickets</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> chances to win.'''</span><span class="p">)</span>    
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Error: invalid number of tickets.'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9db0b49e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">multi_ticket_probability</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Your chances of winning the big prize with 3 tickets are 0.0000215%.
+In other words, you have 1 in 4,661,272 chances to win.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3b82c706">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">test_inputs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="mi">6991908</span><span class="p">,</span> <span class="mi">13983816</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">test_input</span> <span class="ow">in</span> <span class="n">test_inputs</span><span class="p">:</span>
+    <span class="n">multi_ticket_probability</span><span class="p">(</span><span class="n">test_input</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'------------------------'</span><span class="p">)</span> <span class="c1"># output delimiter</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Your chances of winning the big prize with 1 tickets are 0.0000072%.
+In other words, you have 1 in 13,983,816 chances to win.
+------------------------
+Your chances of winning the big prize with 10 tickets are 0.0000715%.
+In other words, you have 1 in 1,398,382 chances to win.
+------------------------
+Your chances of winning the big prize with 100 tickets are 0.0007151%.
+In other words, you have 1 in 139,838 chances to win.
+------------------------
+Your chances of winning the big prize with 10000 tickets are 0.0715112%.
+In other words, you have 1 in 1,398 chances to win.
+------------------------
+Your chances of winning the big prize with 1000000 tickets are 7.1511238%.
+In other words, you have 1 in 14 chances to win.
+------------------------
+Your chances of winning the big prize with 6991908 tickets are 50.0000000%.
+In other words, you have 1 in 2 chances to win.
+------------------------
+Your chances of winning the big prize with 13983816 tickets are 100.0000000%.
+In other words, you have 1 in 1 chances to win.
+------------------------
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e8b555d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Less-Winning-Numbers">Less Winning Numbers<a class="anchor-link" href="#Less-Winning-Numbers">¶</a></h3><p>We will write a function to allow the users to calculate probabilities for two, three, four, or five winning numbers.</p>
+<p>In most 6/49 lotteries there are smaller prizes if a player's ticket matches two, three, four, or five of the six numbers drawn. As a consequence, the users might be interested in knowing the probability of having two, three, four, or five winning numbers.</p>
+<p>The user inputs:</p>
+<ul>
+<li>six different numbers from 1 to 49; and</li>
+<li>an integer between 2 and 5 that represents the number of winning numbers expected</li>
+</ul>
+<p>Our function prints information about the probability of having the inputted number of winning numbers.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=40c81c27">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">probability_less_6</span><span class="p">(</span><span class="n">n_matches</span><span class="p">):</span>
+    <span class="n">n_outcomes</span> <span class="o">=</span> <span class="n">combinations</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">n_successful_outcomes</span> <span class="o">=</span> <span class="n">combinations</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">n_matches</span><span class="p">)</span><span class="o">*</span> <span class="n">combinations</span><span class="p">(</span><span class="mi">49</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="o">-</span><span class="n">n_matches</span><span class="p">)</span> 
+    <span class="n">p_success</span> <span class="o">=</span> <span class="n">n_successful_outcomes</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">n_outcomes</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''The chances of having exactly </span><span class="si">{</span><span class="n">n_matches</span><span class="si">}</span><span class="s1"> winning numbers is </span><span class="si">{</span><span class="n">p_success</span><span class="si">:</span><span class="s1">.7f</span><span class="si">}</span><span class="s1">%.</span>
+<span class="s1">In other words, your chances of having exacty </span><span class="si">{</span><span class="n">n_matches</span><span class="si">}</span><span class="s1"> winning numbers are 1 in </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">n_outcomes</span><span class="o">/</span><span class="n">n_successful_outcomes</span><span class="p">)</span><span class="si">}</span><span class="s1">'''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9d3fa37d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">test_input</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="n">probability_less_6</span><span class="p">(</span><span class="n">test_input</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'--------------------------'</span><span class="p">)</span> <span class="c1"># output delimiter</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>The chances of having exactly 2 winning numbers is 13.2378029%.
+In other words, your chances of having exacty 2 winning numbers are 1 in 8
+--------------------------
+The chances of having exactly 3 winning numbers is 1.7650404%.
+In other words, your chances of having exacty 3 winning numbers are 1 in 57
+--------------------------
+The chances of having exactly 4 winning numbers is 0.0968620%.
+In other words, your chances of having exacty 4 winning numbers are 1 in 1032
+--------------------------
+The chances of having exactly 5 winning numbers is 0.0018450%.
+In other words, your chances of having exacty 5 winning numbers are 1 in 54201
+--------------------------
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3f1188f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h1><p>For the first version of the app, we coded four main functions:</p>
+<ul>
+<li><code>one_ticket_probability()</code> — calculates the probability of winning the big prize with a single ticket</li>
+<li><code>check_historical_occurrence()</code> — checks whether a certain combination has occurred in the Canada lottery data set</li>
+<li><code>multi_ticket_probability()</code> — calculates the probability for any number of of tickets between 1 and 13,983,816</li>
+<li><code>probability_less_6()</code> — calculates the probability of having two, three, four or five winning numbers exactly</li>
+</ul>
+<h3 id="Next-steps">Next steps<a class="anchor-link" href="#Next-steps">¶</a></h3><p>Possible features for a second version of the app include:</p>
+<ul>
+<li>Making the outputs even easier to understand by adding fun analogies (for example, we can find probabilities for strange events and compare with the chances of winning in lottery; for instance, we can output something along the lines "You are 100 times more likely to be the victim of a shark attack than winning the lottery")</li>
+<li>Combining the <code>one_ticket_probability()</code>  and <code>check_historical_occurrence()</code> to output information on probability and historical occurrence at the same time</li>
+<li>Create a function similar to <code>probability_less_6()</code> which calculates the probability of having <em>at least</em> two, three, four or five winning numbers.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89ad73e6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Author">Author<a class="anchor-link" href="#Author">¶</a></h3><p>Puneet Pawar</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+        </div>
+
+        <!-- Neighbors -->
+
+        <!-- Google Adsense -->
+
+    <!-- Releated posts -->
+
+    <!-- Comments -->
+                </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex-shrink-0 bg-dark text-light small py-1">
+        <div class="container text-center">
+            &copy;  <a href="https://pawarpuneet.github.io/blog">Puneet P. - Posts</a> by <a href="https://pawarpuneet.github.io/index.html">Puneet Pawar</a>. Powered by <a href="http://getpelican.com">Pelican</a>, <a href="http://python.org">Python</a>, <a href="https://getbootstrap.com">Bootstrap 4</a><br>
+            <!-- Do not remove below license sentence -->
+            License: <a href="https://spdx.org/licenses/CC-BY-4.0.html">CC-BY-4.0</a>, based on <a href="https://github.com/vuquangtrong/simplify-theme">Simplify Bootstrap Theme</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!--
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    -->
+    <script type="text/javascript" src="../../blog/theme/jquery/jquery-3.4.1.min.js"></script>
+    <!--
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/bootstrap.min.js"></script>
+    -->
+    <script type="text/javascript" src="../../blog/theme/bootstrap/bootstrap.min.js"></script>
+    <!--
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    -->
+    <script type="text/javascript" src="../../blog/theme/style.js"></script>
+
+    <!-- Sharing -->
+
+    <!-- JSON LD -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "What are the chances of winning a lottery?",
+    "headline": "What are the chances of winning a lottery?",
+    "datePublished": "2025-09-01 16:35:00-07:00",
+    "dateModified": "",
+    "author": {
+        "@type": "Person",
+        "name": "Puneet Pawar",
+        "url": "https://pawarpuneet.github.io/blog/author/puneet-pawar.html"
+    },
+    "image": "https://pawarpuneet.github.io/blog/favicon.ico",
+    "url": "https://pawarpuneet.github.io/blog/what-are-the-chances-of-winning-a-lottery.html",
+    "description": "In this project, we are going to contribute to the development of a mobile app by writing a couple of functions that are mostly focused on calculating probabilities. The app is aimed to both prevent and treat lottery addiction by helping people better estimate their chances of winning."
+}
+</script>
+    <!-- Disqus count -->
+</body>
+
+</html>
