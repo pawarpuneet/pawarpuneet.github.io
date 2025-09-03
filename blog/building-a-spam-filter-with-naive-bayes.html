@@ -13,15 +13,15 @@
 
         <!-- Default metadata -->
     <meta name="author" content="Puneet Pawar" />
-    <meta name="description" content="In this project, we are going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)." />
+    <meta name="description" content="In this project, we’re going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)." />
     <meta name="keywords" content="pandas">
 <meta property="og:site_name" content="Puneet P. - Posts" />
 <meta property="og:title" content="Building a spam filter with Naive Bayes" />
-<meta property="og:description" content="In this project, we are going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)." />
+<meta property="og:description" content="In this project, we’re going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)." />
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="https://pawarpuneet.github.io/blog/building-a-spam-filter-with-naive-bayes.html" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-03 10:55:00-07:00" />
+<meta property="article:published_time" content="2025-09-03 14:06:00-07:00" />
 <meta property="article:modified_time" content="" />
 <meta property="article:author" content="https://pawarpuneet.github.io/blog/author/puneet-pawar.html">
 <meta property="article:section" content="Probability" />
@@ -199,7 +199,7 @@
         <header class="bg-dark text-light shadow-sm pt-3 pb-2">
 	<div class="container">
 		<h3 id="building-a-spam-filter-with-naive-bayes">Building a spam filter with Naive Bayes</h3>
-		<p style="font-size:larger;">In this project, we are going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam).</p>
+		<p style="font-size:larger;">In this project, we’re going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam).</p>
         <div class="row mx-auto mt-3">
             <div class="col-xs-12 col-sm-12 col-md-6 text-left" style="padding: 0">
                 <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" class="card-link">Puneet Pawar</a>
@@ -1222,12 +1222,14 @@ $$P(Ham|w1,w2,...,wn)∝P(Ham)⋅ \prod_{i=1}^n P(wi|Ham)$$</p>
 $$P(w_i|Spam) = \frac{N_{w_i|Spam} + \alpha}{N_{Spam} + \alpha \cdot N_{Vocabulary}}$$
 $$P(w_i|Ham) = \frac{N_{w_i|Ham} + \alpha}{N_{Ham} + \alpha \cdot N_{Vocabulary}}$$</p>
 <p>Where:<br />
-$N_{w_i|Spam}$=the number of times the word wi occurs in spam messages<br />
-$N_{w_i|Ham}$=the number of times the word wi occurs in non-spam messages<br />
-$N_{Spam}$=total number of words in spam messages<br />
-$N_{Ham}$=total number of words in non-spam messages<br />
-$N_{Vocabulary}$=total number of words in the vocabulary<br />
-$α=1$    (α is a smoothing parameter)</p>
+$$\begin{align} 
+N_{w_i|Spam} &amp;= \text{the number of times the word wi occurs in spam messages}\\
+N_{w_i|Ham}&amp;=\text{the number of times the word wi occurs in non-spam messages}\\
+N_{Spam}&amp;=\text{total number of words in spam messages}\\
+N_{Ham}&amp;=\text{total number of words in non-spam messages}\\
+N_{Vocabulary}&amp;=\text{total number of words in the vocabulary}\\
+α&amp;=1    \text{(α is a smoothing parameter)}
+\end{align}$$</p>
 </div>
 </div>
 </div>
@@ -1802,7 +1804,7 @@ Filter classified 19 sms incorrectly and we can improve the accuracy further by 
     "@type": "BlogPosting",
     "name": "Building a spam filter with Naive Bayes",
     "headline": "Building a spam filter with Naive Bayes",
-    "datePublished": "2025-09-03 10:55:00-07:00",
+    "datePublished": "2025-09-03 14:06:00-07:00",
     "dateModified": "",
     "author": {
         "@type": "Person",
@@ -1811,7 +1813,7 @@ Filter classified 19 sms incorrectly and we can improve the accuracy further by 
     },
     "image": "https://pawarpuneet.github.io/blog/favicon.ico",
     "url": "https://pawarpuneet.github.io/blog/building-a-spam-filter-with-naive-bayes.html",
-    "description": "In this project, we are going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)."
+    "description": "In this project, we’re going to build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80% — so we expect that more than 80% of the new messages will be classified correctly as spam or ham (non-spam)."
 }
 </script>
     <!-- Disqus count -->
