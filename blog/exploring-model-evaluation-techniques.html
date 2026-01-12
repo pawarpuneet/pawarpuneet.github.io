@@ -14,7 +14,7 @@
         <!-- Default metadata -->
     <meta name="author" content="Puneet Pawar" />
     <meta name="description" content="Let&#39;s dive into the techniques we can use to fit a good model. Let&#39;s find out how to generalize the scores using cross validation? How to detect and avoid overfitting and underfitting? How can regularization help with overfitting? How to streamline hyperparameter tuning using GridSearchCV? How to use more than one scoring metric for a custom strategy to find the best model based on more than one metric? How to optimize for bias and variance?" />
-    <meta name="keywords" content="sklearn, crossval, hyperparameter_tuning, gridsearch, bias_variance, scoring_metrics">
+    <meta name="keywords" content="sklearn, crossval, hyperparameter_tuning, gridsearch, scoring_metrics, validation_curve, learning_curve">
 <meta property="og:site_name" content="Puneet P. - Posts" />
 <meta property="og:title" content="Exploring model evaluation techniques" />
 <meta property="og:description" content="Let&#39;s dive into the techniques we can use to fit a good model. Let&#39;s find out how to generalize the scores using cross validation? How to detect and avoid overfitting and underfitting? How can regularization help with overfitting? How to streamline hyperparameter tuning using GridSearchCV? How to use more than one scoring metric for a custom strategy to find the best model based on more than one metric? How to optimize for bias and variance?" />
@@ -29,8 +29,9 @@
 	<meta property="article:tag" content="crossval" />
 	<meta property="article:tag" content="hyperparameter_tuning" />
 	<meta property="article:tag" content="gridsearch" />
-	<meta property="article:tag" content="bias_variance" />
 	<meta property="article:tag" content="scoring_metrics" />
+	<meta property="article:tag" content="validation_curve" />
+	<meta property="article:tag" content="learning_curve" />
 	<meta property="og:image" content="https://pawarpuneet.github.io/blog/">
 
         <!-- Site Claim -->
@@ -58,6 +59,19 @@
 
 
         <!-- Styles -->
+         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": {
+                styles: {
+                    ".MathJax .mo, .MathJax .mi": {color: "black ! important"}
+                }
+                },
+                tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+                }
+            });
+        </script>
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script> 
         <!--
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -221,8 +235,9 @@
                     <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/crossval.html">crossval</a>
                     <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/hyperparameter_tuning.html">hyperparameter_tuning</a>
                     <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/gridsearch.html">gridsearch</a>
-                    <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/bias_variance.html">bias_variance</a>
                     <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/scoring_metrics.html">scoring_metrics</a>
+                    <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/validation_curve.html">validation_curve</a>
+                    <a class="badge badge-info" href="https://pawarpuneet.github.io/blog/tag/learning_curve.html">learning_curve</a>
             </div>
         </div>
 	</div>

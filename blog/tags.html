@@ -46,6 +46,19 @@
 
 
         <!-- Styles -->
+         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": {
+                styles: {
+                    ".MathJax .mo, .MathJax .mi": {color: "black ! important"}
+                }
+                },
+                tex2jax: {
+                inlineMath: [['$','$'], ['\\\\(','\\\\)']],
+                processEscapes: true
+                }
+            });
+        </script>
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script> 
         <!--
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -212,9 +225,6 @@
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/accuracy.html">
 			  accuracy  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
-			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/bias_variance.html">
-			  bias_variance  <span class="badge badge-light" style="font-size: small;">1</span>
-			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/chi-squared.html">
 			  chi-squared  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
@@ -222,10 +232,13 @@
 			  class_likelihood_ratios  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/classification.html">
-			  classification  <span class="badge badge-light" style="font-size: small;">6</span>
+			  classification  <span class="badge badge-light" style="font-size: small;">7</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/clf_report.html">
 			  clf_report  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/clustering.html">
+			  clustering  <span class="badge badge-light" style="font-size: small;">2</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/confusion_matrix.html">
 			  confusion_matrix  <span class="badge badge-light" style="font-size: small;">1</span>
@@ -235,6 +248,12 @@
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/det.html">
 			  det  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/feature_engineering.html">
+			  feature_engineering  <span class="badge badge-light" style="font-size: small;">3</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/feature_importance.html">
+			  feature_importance  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/feature_scaling.html">
 			  feature_scaling  <span class="badge badge-light" style="font-size: small;">1</span>
@@ -251,17 +270,32 @@
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/homoscedasticity.html">
 			  homoscedasticity  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/hurdle_model.html">
+			  hurdle_model  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/hyperparameter_tuning.html">
 			  hyperparameter_tuning  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/image_compression.html">
+			  image_compression  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/imputation.html">
-			  imputation  <span class="badge badge-light" style="font-size: small;">1</span>
+			  imputation  <span class="badge badge-light" style="font-size: small;">2</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/interpreting_coefficients.html">
+			  interpreting_coefficients  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/kmeans.html">
+			  kmeans  <span class="badge badge-light" style="font-size: small;">2</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/knn.html">
 			  knn  <span class="badge badge-light" style="font-size: small;">3</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/label_encoding.html">
 			  label_encoding  <span class="badge badge-light" style="font-size: small;">2</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/learning_curve.html">
+			  learning_curve  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/learning_rate.html">
 			  learning_rate  <span class="badge badge-light" style="font-size: small;">1</span>
@@ -297,7 +331,7 @@
 			  pipelining  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/polynomial.html">
-			  polynomial  <span class="badge badge-light" style="font-size: small;">1</span>
+			  polynomial  <span class="badge badge-light" style="font-size: small;">2</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/precision-recall.html">
 			  precision-recall  <span class="badge badge-light" style="font-size: small;">1</span>
@@ -309,7 +343,7 @@
 			  random_forest  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/regression.html">
-			  regression  <span class="badge badge-light" style="font-size: small;">8</span>
+			  regression  <span class="badge badge-light" style="font-size: small;">11</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/roc.html">
 			  roc  <span class="badge badge-light" style="font-size: small;">1</span>
@@ -323,8 +357,11 @@
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/seaborn.html">
 			  seaborn  <span class="badge badge-light" style="font-size: small;">3</span>
 			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/silhouette_analysis.html">
+			  silhouette_analysis  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/sklearn.html">
-			  sklearn  <span class="badge badge-light" style="font-size: small;">12</span>
+			  sklearn  <span class="badge badge-light" style="font-size: small;">16</span>
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/sql.html">
 			  sql  <span class="badge badge-light" style="font-size: small;">2</span>
@@ -334,6 +371,12 @@
 			</a>
 			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/squared_error_cost.html">
 			  squared_error_cost  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/stochastic_gradient_descent.html">
+			  stochastic_gradient_descent  <span class="badge badge-light" style="font-size: small;">1</span>
+			</a>
+			<a class="btn btn-info btn-sm" href="https://pawarpuneet.github.io/blog/tag/validation_curve.html">
+			  validation_curve  <span class="badge badge-light" style="font-size: small;">1</span>
 			</a>
 	</div>
     -->
@@ -358,23 +401,6 @@
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/logistic-regression.html">Logistic Regression</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 19 November 2025</span></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Accordion items -->
-            <div class="card">
-                <div id="heading_bias_variance" class="card-header bg-white shadow-sm border-0">
-                    <h2 class="mb-0">
-                        <button type="button" data-toggle="collapse" data-target="#collapsebias_variance" aria-expanded="false" aria-controls="collapsebias_variance" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            bias_variance  <span class="badge badge-warning" style="font-size: small;">1</span>
-                        </button>
-                    </h2>
-                </div>
-                <!-- Item list -->
-                <div id="collapsebias_variance" aria-labelledby="heading_bias_variance" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
-                    <div class="card-body border-bottom">
-                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/exploring-model-evaluation-techniques.html">Exploring model evaluation techniques</a><br>
-                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Mon 22 December 2025</span></span>
                     </div>
                 </div>
             </div>
@@ -417,12 +443,16 @@
                 <div id="heading_classification" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapseclassification" aria-expanded="false" aria-controls="collapseclassification" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            classification  <span class="badge badge-warning" style="font-size: small;">6</span>
+                            classification  <span class="badge badge-warning" style="font-size: small;">7</span>
                         </button>
                     </h2>
                 </div>
                 <!-- Item list -->
                 <div id="collapseclassification" aria-labelledby="heading_classification" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction.html">Heart Disease Prediction</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sat 27 December 2025</span></span>
@@ -463,6 +493,27 @@
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/logistic-regression.html">Logistic Regression</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 19 November 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_clustering" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapseclustering" aria-expanded="false" aria-controls="collapseclustering" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            clustering  <span class="badge badge-warning" style="font-size: small;">2</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapseclustering" aria-labelledby="heading_clustering" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/customer-segmentation-using-clustering.html">Customer Segmentation using Clustering</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 04 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/clustering-kmeans-from-scratch.html">Clustering KMeans from scratch</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 28 December 2025</span></span>
                     </div>
                 </div>
             </div>
@@ -514,6 +565,48 @@
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/logistic-regression-techniques.html">Logistic Regression techniques</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Fri 21 November 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_feature_engineering" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsefeature_engineering" aria-expanded="false" aria-controls="collapsefeature_engineering" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            feature_engineering  <span class="badge badge-warning" style="font-size: small;">3</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsefeature_engineering" aria-labelledby="heading_feature_engineering" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/predicting-medical-costs.html">Predicting medical costs</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-crowded-is-the-campus-gym.html">How crowded is the campus gym?</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Tue 06 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/customer-segmentation-using-clustering.html">Customer Segmentation using Clustering</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 04 January 2026</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_feature_importance" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsefeature_importance" aria-expanded="false" aria-controls="collapsefeature_importance" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            feature_importance  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsefeature_importance" aria-labelledby="heading_feature_importance" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
                     </div>
                 </div>
             </div>
@@ -620,6 +713,23 @@
             </div>
             <!-- Accordion items -->
             <div class="card">
+                <div id="heading_hurdle_model" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsehurdle_model" aria-expanded="false" aria-controls="collapsehurdle_model" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            hurdle_model  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsehurdle_model" aria-labelledby="heading_hurdle_model" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-crowded-is-the-campus-gym.html">How crowded is the campus gym?</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Tue 06 January 2026</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
                 <div id="heading_hyperparameter_tuning" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapsehyperparameter_tuning" aria-expanded="false" aria-controls="collapsehyperparameter_tuning" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
@@ -637,18 +747,77 @@
             </div>
             <!-- Accordion items -->
             <div class="card">
+                <div id="heading_image_compression" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapseimage_compression" aria-expanded="false" aria-controls="collapseimage_compression" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            image_compression  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapseimage_compression" aria-labelledby="heading_image_compression" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/clustering-kmeans-from-scratch.html">Clustering KMeans from scratch</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 28 December 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
                 <div id="heading_imputation" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapseimputation" aria-expanded="false" aria-controls="collapseimputation" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            imputation  <span class="badge badge-warning" style="font-size: small;">1</span>
+                            imputation  <span class="badge badge-warning" style="font-size: small;">2</span>
                         </button>
                     </h2>
                 </div>
                 <!-- Item list -->
                 <div id="collapseimputation" aria-labelledby="heading_imputation" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
                     <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction.html">Heart Disease Prediction</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sat 27 December 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_interpreting_coefficients" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapseinterpreting_coefficients" aria-expanded="false" aria-controls="collapseinterpreting_coefficients" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            interpreting_coefficients  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapseinterpreting_coefficients" aria-labelledby="heading_interpreting_coefficients" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_kmeans" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsekmeans" aria-expanded="false" aria-controls="collapsekmeans" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            kmeans  <span class="badge badge-warning" style="font-size: small;">2</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsekmeans" aria-labelledby="heading_kmeans" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/customer-segmentation-using-clustering.html">Customer Segmentation using Clustering</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 04 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/clustering-kmeans-from-scratch.html">Clustering KMeans from scratch</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 28 December 2025</span></span>
                     </div>
                 </div>
             </div>
@@ -695,6 +864,23 @@
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-does-k-nearest-neighbors-algorithm-work.html">How does K-Nearest Neighbors algorithm work?</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 24 December 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_learning_curve" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapselearning_curve" aria-expanded="false" aria-controls="collapselearning_curve" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            learning_curve  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapselearning_curve" aria-labelledby="heading_learning_curve" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/exploring-model-evaluation-techniques.html">Exploring model evaluation techniques</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Mon 22 December 2025</span></span>
                     </div>
                 </div>
             </div>
@@ -946,12 +1132,16 @@
                 <div id="heading_polynomial" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapsepolynomial" aria-expanded="false" aria-controls="collapsepolynomial" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            polynomial  <span class="badge badge-warning" style="font-size: small;">1</span>
+                            polynomial  <span class="badge badge-warning" style="font-size: small;">2</span>
                         </button>
                     </h2>
                 </div>
                 <!-- Item list -->
                 <div id="collapsepolynomial" aria-labelledby="heading_polynomial" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/predicting-medical-costs.html">Predicting medical costs</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-to-implement-polynomial-regression-and-pipelining.html">How to implement Polynomial Regression and Pipelining?</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sat 01 November 2025</span></span>
@@ -1014,12 +1204,24 @@
                 <div id="heading_regression" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapseregression" aria-expanded="false" aria-controls="collapseregression" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            regression  <span class="badge badge-warning" style="font-size: small;">8</span>
+                            regression  <span class="badge badge-warning" style="font-size: small;">11</span>
                         </button>
                     </h2>
                 </div>
                 <!-- Item list -->
                 <div id="collapseregression" aria-labelledby="heading_regression" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/predicting-medical-costs.html">Predicting medical costs</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-crowded-is-the-campus-gym.html">How crowded is the campus gym?</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Tue 06 January 2026</span></span>
+                    </div>
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/logistic-regression-techniques.html">Logistic Regression techniques</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Fri 21 November 2025</span></span>
@@ -1132,15 +1334,48 @@
             </div>
             <!-- Accordion items -->
             <div class="card">
+                <div id="heading_silhouette_analysis" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsesilhouette_analysis" aria-expanded="false" aria-controls="collapsesilhouette_analysis" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            silhouette_analysis  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsesilhouette_analysis" aria-labelledby="heading_silhouette_analysis" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/customer-segmentation-using-clustering.html">Customer Segmentation using Clustering</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 04 January 2026</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
                 <div id="heading_sklearn" class="card-header bg-white shadow-sm border-0">
                     <h2 class="mb-0">
                         <button type="button" data-toggle="collapse" data-target="#collapsesklearn" aria-expanded="false" aria-controls="collapsesklearn" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                            sklearn  <span class="badge badge-warning" style="font-size: small;">12</span>
+                            sklearn  <span class="badge badge-warning" style="font-size: small;">16</span>
                         </button>
                     </h2>
                 </div>
                 <!-- Item list -->
                 <div id="collapsesklearn" aria-labelledby="heading_sklearn" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction-using-logistic-regression.html">Heart Disease Prediction using Logistic Regression </a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/predicting-medical-costs.html">Predicting medical costs</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Wed 07 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-crowded-is-the-campus-gym.html">How crowded is the campus gym?</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Tue 06 January 2026</span></span>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/customer-segmentation-using-clustering.html">Customer Segmentation using Clustering</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sun 04 January 2026</span></span>
+                    </div>
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/heart-disease-prediction.html">Heart Disease Prediction</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sat 27 December 2025</span></span>
@@ -1247,6 +1482,40 @@
                     <div class="card-body border-bottom">
                         <a  class="m-0" href="https://pawarpuneet.github.io/blog/simple-linear-regression.html">Simple Linear Regression</a><br>
                         <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Sat 04 October 2025</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_stochastic_gradient_descent" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsestochastic_gradient_descent" aria-expanded="false" aria-controls="collapsestochastic_gradient_descent" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            stochastic_gradient_descent  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsestochastic_gradient_descent" aria-labelledby="heading_stochastic_gradient_descent" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/how-crowded-is-the-campus-gym.html">How crowded is the campus gym?</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Tue 06 January 2026</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_validation_curve" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapsevalidation_curve" aria-expanded="false" aria-controls="collapsevalidation_curve" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            validation_curve  <span class="badge badge-warning" style="font-size: small;">1</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapsevalidation_curve" aria-labelledby="heading_validation_curve" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="https://pawarpuneet.github.io/blog/exploring-model-evaluation-techniques.html">Exploring model evaluation techniques</a><br>
+                        <span class="small">by <a href="https://pawarpuneet.github.io/blog/author/puneet-pawar.html" style="color: darkblue;">Puneet Pawar</a>, post on <span class="text-success">Mon 22 December 2025</span></span>
                     </div>
                 </div>
             </div>
